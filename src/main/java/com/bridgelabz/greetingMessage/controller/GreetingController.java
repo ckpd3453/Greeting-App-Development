@@ -61,4 +61,16 @@ public class GreetingController {
     public List<Greeting> getAll() {
         return iGreetingService.getAll();
     }
+
+    /**
+     * Method to edit the greetings present in the database
+     *
+     * @param greeting
+     * @return - edited greeting message.
+     * URL - http://localhost:8080/greeting/edit
+     */
+    @PutMapping("/edit")
+    public Greeting updateGreeting(@RequestBody Greeting greeting) {
+        return iGreetingService.updateGreeting(greeting);
+    }
 }

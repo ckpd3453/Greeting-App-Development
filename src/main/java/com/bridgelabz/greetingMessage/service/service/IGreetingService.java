@@ -11,4 +11,6 @@ public interface IGreetingService {
     Greeting getGreetingById(long id); //Method to find user by its ID
 
     List<Greeting> getAll(); //Method to get all list of Repository
+
+    Greeting updateGreeting(Greeting greeting);  //Method to update/edit Greeting Messages
 }
