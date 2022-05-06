@@ -3,8 +3,12 @@ package com.bridgelabz.greetingMessage.service.service;
 import com.bridgelabz.greetingMessage.entity.Greeting;
 import com.bridgelabz.greetingMessage.entity.User;
 
-public interface IGreetingService {
-    Greeting addGreeting(User user);
+import java.util.List;
 
-    Greeting getGreetingById(long id);
+public interface IGreetingService {
+    Greeting addGreeting(User user);  //Method to add User
+
+    Greeting getGreetingById(long id); //Method to find user by its ID
+
+    List<Greeting> getAll(); //Method to get all list of Repository
 }

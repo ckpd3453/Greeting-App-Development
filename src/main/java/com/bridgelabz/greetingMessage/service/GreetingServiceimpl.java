@@ -7,6 +7,8 @@ import com.bridgelabz.greetingMessage.service.service.IGreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
@@ -40,5 +42,14 @@ public class GreetingServiceimpl implements IGreetingService {
     @Override
     public Greeting getGreetingById(long id){
         return greetingRepository.findById(id).get();
+    }
+
+    /**
+     *  Method to get the list of repository.
+     * @return - List all users in the repository.
+     */
+    @Override
+    public List<Greeting> getAll() {
+        return greetingRepository.findAll();
     }
 }
