@@ -6,6 +6,7 @@ import com.bridgelabz.greetingMessage.service.service.IGreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.Id;
 import java.util.List;
 
 /**
@@ -72,5 +73,16 @@ public class GreetingController {
     @PutMapping("/edit")
     public Greeting updateGreeting(@RequestBody Greeting greeting) {
         return iGreetingService.updateGreeting(greeting);
+    }
+
+    /**
+     * Method to delete the user from the repository.
+     *
+     * @param id
+     * URL - http://localhost:8080/greeting/delete
+     */
+    @DeleteMapping("/delete")
+    public void deleteGreeting(@RequestParam(value = "id") long id) {
+        iGreetingService.deleteGreeting(id);
     }
 }

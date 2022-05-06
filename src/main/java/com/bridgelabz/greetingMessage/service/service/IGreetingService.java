@@ -6,6 +6,8 @@ import com.bridgelabz.greetingMessage.entity.User;
 import java.util.List;
 
 public interface IGreetingService {
+    void deleteGreeting(long id); //Method to delete user
+
     Greeting addGreeting(User user);  //Method to add User
 
     Greeting getGreetingById(long id); //Method to find user by its ID

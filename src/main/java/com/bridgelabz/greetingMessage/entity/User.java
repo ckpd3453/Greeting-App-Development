@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- *  User class is Defining the attributes of the user  and getting and setting the values/parameters in them.
+ * User class is Defining the attributes of the user  and getting and setting the values/parameters in them.
  */
 @Getter
 @Setter
