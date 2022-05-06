@@ -5,4 +5,6 @@ import com.bridgelabz.greetingMessage.entity.User;
 
 public interface IGreetingService {
     Greeting addGreeting(User user);
+
+    Greeting getGreetingById(long id);
 }

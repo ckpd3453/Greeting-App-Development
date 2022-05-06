@@ -32,6 +32,12 @@ public class GreetingServiceimpl implements IGreetingService {
         return greetingRepository.save(new Greeting(counter.incrementAndGet(),message));
     }
 
+    /**
+     *  Method to find the greeting statement using id.
+     * @param id
+     * @return - Greeting message by ID.
+     */
+    @Override
     public Greeting getGreetingById(long id){
         return greetingRepository.findById(id).get();
     }
