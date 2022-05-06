@@ -25,13 +25,17 @@ public class GreetingController {
     /**
      *  Method to get the Parameter and set the parameter to its respective attribute defined in the user entity/class,
      *  And Should return the output.
-     * @param name - firstname as parameter.
+     * @param firstName - firstname as parameter
+     * @param lastName - lastname as parameter
      * @return -  To add the given parameter lo the local repository and save the data into the h2 Database.
+     * URL - http://localhost:8080/greeting/fullname?firstName=Chandrakant&lastName=Prasad
      */
     @GetMapping("/home")
-    public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
+    public Greeting greeting(@RequestParam(value = "firstName", defaultValue = "first") String firstName,
+                                                @RequestParam(value = "lastName", defaultValue = "last") String lastName){
         User user = new User();
-        user.setFirstName(name);
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
         return iGreetingService.addGreeting(user);
     }
 }
